@@ -59,14 +59,15 @@ function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="mailto:sarthak.pant31@gmail.com"
+                  target='_blank'
                   smooth={true}
                   duration={1000}
                   onClick={() => setCheck(!check)}
                 >
                   Hire-me
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

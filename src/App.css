@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 body::-webkit-scrollbar{
   display: none;
@@ -25,15 +26,19 @@ body::-webkit-scrollbar{
     height: 65%;
     justify-content: flex-end;
 }
-.App .leftPart .fonts i{
+.App .leftPart .fonts  i{
     margin-top: 20px;
     font-size: 25px;
 
     color: #FF7800;
     cursor: pointer;
 }
+.App .leftPart .fonts  i a{
+    text-decoration: none;
+    color: inherit;
+}
 
-.App .leftPart .fonts i:hover{
+.App .leftPart .fonts  i:hover{
     color: #b65500;
     transition: 0.3s ease-in;
 }

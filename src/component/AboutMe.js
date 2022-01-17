@@ -1,7 +1,47 @@
-import React from "react";
-import { FaDatabase, FaGithubAlt, FaHackerrank, FaJs, FaLaptopCode, FaNodeJs, FaPython, FaReact, FaTwitter } from "react-icons/fa";
+import React,{useEffect,useState} from "react";
 import "../Styles/AboutMe.css";
+import { motion } from "framer-motion";
+import { RightPart } from "./RightPart";
+import { useInView } from "react-intersection-observer";
+import {useAnimation} from 'framer-motion'
 function AboutMe() {
+
+  const { ref, inView } = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+  const animationImg = useAnimation();
+
+  const [pass,setPass] = useState(false)
+  useEffect(()=>{
+    console.log(inView);
+    if (inView) {
+      setPass(true)
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.3,
+        },
+      });
+      animationImg.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.3,
+        },
+      });
+
+    }
+    if (!inView && !pass) {
+      animation.start({
+        x: "-100vh",
+      });
+      animationImg.start({
+        x: "100vh",
+      });
+    }
+  },[inView])
   return (
     <div className="aboutMe" id="aboutme">
       <div className="head">
@@ -10,10 +50,10 @@ function AboutMe() {
           <hr />
         </div>
       </div>
-      <div className="lowerAbout">
+      <div ref={ref} className="lowerAbout">
         
         <div className="centerPart">
-          <div className="text">
+          <motion.div animate={animation} className="text">
             <p>
               I'm a Noida-based software engineer who specilizes in building and
               designing exceptional digotal experience.Currently, I'm an
@@ -42,31 +82,12 @@ function AboutMe() {
             <div className="touch">
               <a>Get In Touch</a>
             </div>
-          </div>
-          <div className="aboutMeImage">
+          </motion.div>
+          <motion.div animate={animationImg} className="aboutMeImage">
             <img src="https://brave-montalcini-c90832.netlify.app/image/me.jpeg" />
-          </div>
+          </motion.div>
         </div>
-        <div className="rightPart">
-          <i>
-            <FaDatabase />
-          </i>
-          <i>
-            <FaReact />
-          </i>
-          <i>
-            <FaJs />
-          </i>
-          <i>
-            <FaPython />
-          </i>
-          <i>
-            <FaNodeJs />
-          </i>
-          <i>
-            <FaLaptopCode />
-          </i>
-        </div>
+        <RightPart/>
       </div>
     </div>
   );

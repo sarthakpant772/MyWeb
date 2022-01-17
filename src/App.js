@@ -16,22 +16,28 @@ function App() {
       <div className="leftPart">
         <div className="fonts">
           <i>
-            <FaGithubAlt />
+            <a href="https://github.com/sarthakpant772">
+              <FaGithubAlt />
+            </a>
           </i>
           <i>
-            <FaTwitter />
+            <a href="https://twitter.com/1SarthakPant">
+              <FaTwitter />
+            </a>
           </i>
           <i>
-            <FaHackerrank />
+            <a href="https://www.hackerrank.com/sarthak_pant31">
+              <FaHackerrank />
+            </a>
           </i>
         </div>
         <div className="vl"></div>
       </div>
-     
+
       <NavBar />
-      <MainPage/>
-      <AboutMe/>
-      <MyWork/>
+      <MainPage />
+      <AboutMe />
+      <MyWork />
       <Footer />
     </div>
   );
