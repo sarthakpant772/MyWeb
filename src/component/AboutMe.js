@@ -1,20 +1,19 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/AboutMe.css";
 import { motion } from "framer-motion";
 import { RightPart } from "./RightPart";
 import { useInView } from "react-intersection-observer";
-import {useAnimation} from 'framer-motion'
+import { useAnimation } from "framer-motion";
 function AboutMe() {
-
   const { ref, inView } = useInView({ threshold: 0.3 });
   const animation = useAnimation();
   const animationImg = useAnimation();
 
-  const [pass,setPass] = useState(false)
-  useEffect(()=>{
+  const [pass, setPass] = useState(false);
+  useEffect(() => {
     console.log(inView);
     if (inView) {
-      setPass(true)
+      setPass(true);
       animation.start({
         x: 0,
         transition: {
@@ -31,7 +30,6 @@ function AboutMe() {
           bounce: 0.3,
         },
       });
-
     }
     if (!inView && !pass) {
       animation.start({
@@ -41,7 +39,7 @@ function AboutMe() {
         x: "100vh",
       });
     }
-  },[inView])
+  }, [inView]);
   return (
     <div className="aboutMe" id="aboutme">
       <div className="head">
@@ -51,7 +49,6 @@ function AboutMe() {
         </div>
       </div>
       <div ref={ref} className="lowerAbout">
-        
         <div className="centerPart">
           <motion.div animate={animation} className="text">
             <p>
@@ -62,10 +59,9 @@ function AboutMe() {
             </p>
             <br />
             <p>
-              I have resently have taken{" "}
-              <span href="#">session on Git/Github</span>. Telling about the use
-              of git and github and also introducing them to the world of open
-              source.
+              I resently have taken <span href="#">session on Git/Github</span>.
+              Telling about the use of git and github and also introducing them
+              to the world of open source.
             </p>
             <div className="tech">
               <ul>
@@ -87,7 +83,7 @@ function AboutMe() {
             <img src="https://brave-montalcini-c90832.netlify.app/image/me.jpeg" />
           </motion.div>
         </div>
-        <RightPart/>
+        <RightPart />
       </div>
     </div>
   );
