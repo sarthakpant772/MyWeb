@@ -7,3 +7,6 @@
 .example::-webkit-scrollbar {
   display: none;
 }
+#tsparticles {
+  height: 100px;
+}

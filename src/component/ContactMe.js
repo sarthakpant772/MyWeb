@@ -4,6 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import SendIcon from '@mui/icons-material/Send'
 const ContactMe = () => {
   return (
     <Box
@@ -165,23 +166,106 @@ const ContactMe = () => {
             color: 'secondary.dark',
           }}
         >
-          <Box>
-            <TextField id="standard-basic" label="Email" variant="standard" />
-            <TextField
-              id="standard-basic"
-              label="Standard"
-              variant="standard"
-            />
-            <TextField
-              id="standard-basic"
-              label="Standard"
-              variant="standard"
-            />
-            <TextField
-              id="outlined-basic"
-              label="Outlined"
-              variant="outlined"
-            />
+          <Box
+            sx={{
+              width: '100%',
+              height: '100%',
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Box
+              sx={{
+                width: '80%',
+                height: '80%',
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-evenly',
+                color: 'secondary.dark',
+              }}
+            >
+              <TextField
+                id="standard-password-input"
+                label="Your Email"
+                color="secondary"
+                type="email"
+                autoComplete="current-password"
+                variant="standard"
+                sx={{
+                  width: '100%',
+                  color: 'secondary.dark',
+                  '& .MuiFormLabel-root': {
+                    color: 'secondary.light',
+                  },
+                  '& .MuiFormLabel-root.Mui-focused': {
+                    color: 'secondary.light',
+                  },
+                }}
+              />
+              <TextField
+                id="standard-password-input"
+                label="Your Name"
+                color="secondary"
+                autoComplete="current-password"
+                variant="standard"
+                sx={{
+                  width: '100%',
+                  color: 'secondary.dark',
+                  '& .MuiFormLabel-root': {
+                    color: 'secondary.light',
+                  },
+                  '& .MuiFormLabel-root.Mui-focused': {
+                    color: 'secondary.light',
+                  },
+                }}
+              />
+              <TextField
+                id="standard-basic"
+                label="PhoneNumber"
+                color="secondary"
+                variant="standard"
+                sx={{
+                  width: '100%',
+                  color: 'secondary.dark',
+                  '& .MuiFormLabel-root': {
+                    color: 'secondary.light',
+                  },
+                  '& .MuiFormLabel-root.Mui-focused': {
+                    color: 'secondary.light',
+                  },
+                }}
+              />
+              <TextField
+                id="outlined-multiline-static"
+                label="Enter Msg"
+                multiline
+                rows={4}
+                color="secondary"
+                inputProps={{ color: 'secondary.light' }}
+                sx={{
+                  width: '100%',
+                  color: 'secondary.light',
+                  '& .MuiFormLabel-root': {
+                    color: 'secondary.light',
+                  },
+                  '& .MuiFormLabel-root.Mui-focused': {
+                    color: 'secondary.light',
+                  },
+                }}
+              />
+
+              <Button
+                sx={{
+                  backgroundColor: 'secondary.dark',
+                  color: 'secondary.light',
+                }}
+              >
+                <Typography variant="subtitle1">Send</Typography>
+                <SendIcon />
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Box>

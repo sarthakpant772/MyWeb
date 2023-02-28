@@ -18,14 +18,14 @@ function App() {
       primary: {
         main: '#112D4E',
         light: '#3F72AF',
-        contrastText: 'rgb(67, 69, 67)',
+        contrastText: '#F9F7F7',
       },
       secondary: {
         main: '#DBE2EF',
         // light: '#F9C80E',
         light: '#F9F7F7',
         dark: '#F9C80E',
-        contrastText: '#112D4E',
+        contrastText: '#F9F7F7',
       },
     },
     typography: {
@@ -40,6 +40,9 @@ function App() {
       '&:hover': {
         backgroundColor: '#3F72AF',
       },
+    },
+    input: {
+      color: 'white',
     },
   })
   return (

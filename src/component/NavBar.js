@@ -8,7 +8,7 @@ const NavBar = () => {
         position: 'sticky',
         width: '100%',
         height: '5vh',
-        backgroundColor: 'primary.main',
+        backgroundColor: '#000814',
         border: 0,
         margin: 0,
         boxShadow:
