@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux'
 import project from '../json/exp.json'
 const ExpCard = () => {
   let value = useSelector((state) => state.card.expValue)
-  value = (value + 3) % 3
+  const check  = project.length
+  value = (value + check) % check
   console.log(value)
   // let value = 3
   return (
@@ -76,7 +77,7 @@ const ExpCard = () => {
               </Typography>
             </Typography>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               width: '90%',
               height: '10%',
@@ -117,7 +118,7 @@ const ExpCard = () => {
                 </Button>
               </Box>
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
       <Box

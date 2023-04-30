@@ -1,11 +1,41 @@
 import { Autocomplete, Box, Button, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import SendIcon from '@mui/icons-material/Send'
+import emailjs from '@emailjs/browser'
 const ContactMe = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = () => {
+    const emailContent = {
+      user_name: name,
+      user_email: email,
+      message: message,
+      to_name: 'sarthak',
+    }
+
+    emailjs
+      .send(
+        'service_ju5wc5p',
+        'template_2lynrsa',
+        emailContent,
+        'moZRKgVtDjFAIXYwu',
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        },
+      )
+  }
+
   return (
     <Box
       id="connect"
@@ -90,7 +120,7 @@ const ContactMe = () => {
             sx={{
               width: '80%',
               height: '20%',
-              alignItems: 'center',
+              alignItems: { xs: 'center', lg: 'start' },
               display: { xs: 'none', lg: 'flex' },
               flexDirection: 'column',
             }}
@@ -140,22 +170,34 @@ const ContactMe = () => {
               }}
             >
               <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
-                <Button sx={{ color: 'secondary.light' }}>
+                <Button
+                  sx={{ color: 'secondary.light' }}
+                  href="https://www.instagram.com/sarthak.pant31/"
+                >
                   <InstagramIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
               <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
-                <Button sx={{ color: 'secondary.light' }}>
+                <Button
+                  sx={{ color: 'secondary.light' }}
+                  href="https://twitter.com/1SarthakPant"
+                >
                   <TwitterIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
               <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
-                <Button sx={{ color: 'secondary.light' }}>
+                <Button
+                  sx={{ color: 'secondary.light' }}
+                  href="https://github.com/sarthakpant772"
+                >
                   <GitHubIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
               <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
-                <Button sx={{ color: 'secondary.light' }}>
+                <Button
+                  sx={{ color: 'secondary.light' }}
+                  href="https://www.linkedin.com/in/sarthak-pant-8844521b7/"
+                >
                   <LinkedInIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
@@ -193,7 +235,7 @@ const ContactMe = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-evenly',
-                color: 'secondary.dark',
+                color: '#fffff',
                 borderRight: '10px',
               }}
             >
@@ -202,16 +244,18 @@ const ContactMe = () => {
                 label="Your Email"
                 color="secondary"
                 type="email"
+                onChange={(e) => setEmail(e.target.value)}
                 autoComplete="current-password"
                 variant="standard"
+                inputProps={{ style: { fontFamily: 'Arial', color: 'white' } }}
                 sx={{
                   width: '100%',
-                  color: 'secondary.dark',
+                  color: '#ffff',
                   '& .MuiFormLabel-root': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                   '& .MuiFormLabel-root.Mui-focused': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                 }}
               />
@@ -219,50 +263,38 @@ const ContactMe = () => {
                 id="standard-password-input"
                 label="Your Name"
                 color="secondary"
+                onChange={(e) => setName(e.target.value)}
                 autoComplete="current-password"
                 variant="standard"
+                inputProps={{ style: { fontFamily: 'Arial', color: 'white' } }}
                 sx={{
                   width: '100%',
-                  color: 'secondary.dark',
+                  color: '#ffff',
                   '& .MuiFormLabel-root': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                   '& .MuiFormLabel-root.Mui-focused': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                 }}
               />
-              <TextField
-                id="standard-basic"
-                label="PhoneNumber"
-                color="secondary"
-                variant="standard"
-                sx={{
-                  width: '100%',
-                  color: 'secondary.dark',
-                  '& .MuiFormLabel-root': {
-                    color: 'secondary.light',
-                  },
-                  '& .MuiFormLabel-root.Mui-focused': {
-                    color: 'secondary.light',
-                  },
-                }}
-              />
+
               <TextField
                 id="outlined-multiline-static"
                 label="Enter Msg"
+                onChange={(e) => setMessage(e.target.value)}
                 multiline
                 rows={4}
                 color="secondary"
-                inputProps={{ color: 'secondary.light' }}
+                inputProps={{ style: { fontFamily: 'Arial', color: 'white' } }}
                 sx={{
                   width: '100%',
-                  color: 'secondary.light',
+                  color: '#ffff',
                   '& .MuiFormLabel-root': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                   '& .MuiFormLabel-root.Mui-focused': {
-                    color: 'secondary.light',
+                    color: '#ffff',
                   },
                 }}
               />
@@ -272,6 +304,7 @@ const ContactMe = () => {
                   backgroundColor: 'secondary.dark',
                   color: 'secondary.light',
                 }}
+                onClick={handleSubmit}
               >
                 <Typography variant="subtitle1">Send</Typography>
                 <SendIcon />

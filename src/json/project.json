@@ -1,33 +1,33 @@
 [
   {
     "name": "Buffer",
-    "description1": "loerm",
-    "description2": "loerm",
-    "codeLink": "",
+    "description1": "Project aims to provide a bigger market for the chemical Industries . It contains dashboards to enable buyers and sellers with graded chemical options along with a secured method of registration and payment gateways.The contact portal of buyer and seller is enabled to allow transparency. The project allows the Buyer company to lodge the tender for the degraded material for once to concede the profit making strategy with end to end encryption to allow data privacy as well. The transportation and convenience  allow better options at a single place and live tracking of their product.",
+    "description2": "MERN Stack Project",
+    "codeLink": "https://github.com/sarthakpant772/Buffer",
     "demoLink": "",
     "imageLink": "Project.webp"
   },
   {
     "name": "insideGuide",
-    "description1": "loerm",
-    "description2": "loerm",
-    "codeLink": "",
+    "description1": "This project aims to create a library management system for people with vision impairment. Our aim is to provide an interactive and user-friendly interface that allows users to access books in the library with ease. Our system analyses the location of books and guides the person with the reference of the number of footsteps and directions from their current location. The most unique feature of our system is that it enables the user to use their voice to say the name of the book along with the author's name, making it easier for them to learn without any dependencies. We understand the importance of accessibility and inclusivity and this porject is dedicated for them.",
+    "description2": "",
+    "codeLink": "https://github.com/sarthakpant772/insideGuide",
     "demoLink": "",
     "imageLink": "Project.webp"
   },
   {
-    "name": "insideGuide",
-    "description1": "loerm",
-    "description2": "loerm",
-    "codeLink": "",
+    "name": "Pencil Portal",
+    "description1": "Pencil Portal is a portal that deals with child labour.Me and my team made this porject and in SIH-2022 and it is a winning Project.This project have multiple dashbord from nodal officers to NGO.We though of connecting goverment offcials with all the ngos for the betterment of those who are facing ching labour. We made raising a complaint easy and secure. Erlier it would have take more than 5 minutes to mark a complaint and form this we have automated the process and reduces it down to 50 seconds at max.",
+    "description2": "",
+    "codeLink": "https://github.com/sarthakpant772/Spam_Bytes-1",
     "demoLink": "",
     "imageLink": "Project.webp"
   },
   {
-    "name": "insideGuide",
-    "description1": "loerm",
-    "description2": "loerm",
-    "codeLink": "",
+    "name": "MLNow 2.0",
+    "description1": "It is set of simple ML projects that would help the people that have started learning ML it contains all the algorithm that is needed to start ML and all the code with dataset link has been provided.",
+    "description2": "",
+    "codeLink": "https://github.com/sarthakpant772/MLnow_2.0",
     "demoLink": "",
     "imageLink": "Project.webp"
   }

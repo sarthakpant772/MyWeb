@@ -7,8 +7,8 @@ import { useSelector } from 'react-redux'
 import project from '../json/project.json'
 const Card = () => {
   let value = useSelector((state) => state.card.projectValue)
-  value = (value + 3) % 3
-  console.log(value)
+  const check = project.length
+  value = (value + check) % check
   // let value = 3
 
   return (
