@@ -1,77 +1,46 @@
-import {
-  Box,
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-} from '@mui/material'
 import React from 'react'
-import { Provider } from 'react-redux'
-import { store } from './app/store'
-import Aboutme from './component/Aboutme'
-import ContactMe from './component/ContactMe'
-import Experience from './component/Experience'
-import HeroPage from './component/HeroPage'
-import NavBar from './component/NavBar'
-import PersonalProjects from './component/PersonalProjects'
-import Skills from './component/Skills'
+import { FaGithubAlt, FaHackerrank, FaTwitter } from 'react-icons/fa';
+import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { AboutMe } from './component/AboutMe';
+import { Footer } from './component/Footer';
+import { MainPage } from './component/MainPage';
+
+import { MyWork } from './component/MyWork';
+import { NavBar } from './component/NavBar';
 
 function App() {
-  let theme = createTheme({
-    palette: {
-      common: {
-        black: '#000',
-        white: '#fff',
-      },
-      primary: {
-        main: '#212428',
-        light: '#16181B',
-        contrastText: '#F9F7F7',
-      },
-      secondary: {
-        main: '#DBE2EF',
-        // light: '#F9C80E',
-        light: '#F9F7F7',
-        dark: '#F9C80E',
-        contrastText: '#F9F7F7',
-      },
-    },
-    typography: {
-      fontFamily: 'Poppins, sans-serif',
-      h2: {
-        fontSize: '3.75rem',
-      },
-      subtitle1: {
-        fontWeight: '600',
-      },
-    },
-    button: {
-      backgroundColor: '#112D4E',
-      color: '#F9F7F7',
-      '&:hover': {
-        backgroundColor: '#3F72AF',
-      },
-    },
-    input: {
-      color: 'white',
-    },
-  })
-
-  theme = responsiveFontSizes(theme)
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        <Provider store={store}>
-          <NavBar />
-          <HeroPage />
-          <Aboutme />
-          <PersonalProjects />
-          <Skills />
-          <Experience />
-          <ContactMe />
-        </Provider>
-      </Box>
-    </ThemeProvider>
-  )
+    <div className="App">
+      <div className="leftPart">
+        <div className="fonts">
+          <i>
+            <a href="https://github.com/sarthakpant772">
+              <FaGithubAlt />
+            </a>
+          </i>
+          <i>
+            <a href="https://twitter.com/1SarthakPant">
+              <FaTwitter />
+            </a>
+          </i>
+          <i>
+            <a href="https://www.hackerrank.com/sarthak_pant31">
+              <FaHackerrank />
+            </a>
+          </i>
+        </div>
+        <div className="vl"></div>
+      </div>
+
+      <NavBar />
+      <MainPage />
+      <AboutMe />
+      <MyWork />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
