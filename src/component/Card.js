@@ -17,7 +17,7 @@ const Card = () => {
         marginLeft: '1em',
         marginRight: '1em',
         position: 'relative',
-        height: { xs: '90%', lg: '80%' },
+        height: {lg: '80%' },
         width: '70em',
         backgroundColor: 'primary.dark',
         boxShadow:

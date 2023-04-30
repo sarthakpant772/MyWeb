@@ -16,7 +16,7 @@ const Experience = () => {
     <Box
       sx={{
         width: '100%',
-        height: '100vh',
+        height: { lg: '100vh' },
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',

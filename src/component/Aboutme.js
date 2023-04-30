@@ -3,6 +3,21 @@ import { borderRadius } from '@mui/system'
 import React from 'react'
 import pic from '../Images/pic.jpeg'
 const Aboutme = () => {
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('MyResume.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob)
+        // Setting various property values
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'MyResume.pdf'
+        alink.click()
+      })
+    })
+  }
+
   return (
     <Box
       id="about"
@@ -146,7 +161,11 @@ const Aboutme = () => {
             justifyContent: { xs: 'flex-end', sm: 'flex-start' },
           }}
         >
-          <Button sx={{ backgroundColor: 'primary.light' }} size="large">
+          <Button
+            sx={{ backgroundColor: 'primary.light' }}
+            size="large"
+            onClick={onButtonClick}
+          >
             <Typography color="secondary.dark" variant="subtitle1">
               Download CV
             </Typography>

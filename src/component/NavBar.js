@@ -3,6 +3,20 @@ import React from 'react'
 import { Link } from 'react-scroll'
 
 const NavBar = () => {
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('MyResume.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob)
+        // Setting various property values
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'MyResume.pdf'
+        alink.click()
+      })
+    })
+  }
   return (
     <Box
       sx={{
@@ -109,7 +123,7 @@ const NavBar = () => {
             </Typography>
           </Link>
         </Button>
-        <Button>
+        <Button onClick={onButtonClick}>
           <Typography
             variant="subtitle1"
             sx={{

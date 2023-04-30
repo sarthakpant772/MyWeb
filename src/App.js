@@ -1,4 +1,9 @@
-import { Box, createTheme, ThemeProvider } from '@mui/material'
+import {
+  Box,
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from '@mui/material'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from './app/store'
@@ -11,7 +16,7 @@ import PersonalProjects from './component/PersonalProjects'
 import Skills from './component/Skills'
 
 function App() {
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       common: {
         black: '#000',
@@ -50,6 +55,8 @@ function App() {
       color: 'white',
     },
   })
+
+  theme = responsiveFontSizes(theme)
   return (
     <ThemeProvider theme={theme}>
       <Box>
