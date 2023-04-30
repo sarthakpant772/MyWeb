@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dbdde4b7.css",
+    "main.js": "/static/js/main.75ed2cce.js",
+    "static/media/HeroPage.gif": "/static/media/HeroPage.3fd43e68ce3f7d3dc42c.gif",
+    "static/media/Project.webp": "/static/media/Project.4efd567754d8b2fde415.webp",
+    "static/media/sql.png": "/static/media/sql.c10b5bc47b47f99e1ff1.png",
+    "static/media/myPic.png": "/static/media/myPic.d9752efcd3ae7ff69648.png",
+    "static/media/Mypic.png": "/static/media/Mypic.29c4a4151ebfb506f65c.png",
+    "static/media/pic.jpeg": "/static/media/pic.105146e50f30fe61735f.jpeg",
+    "static/media/mongo.png": "/static/media/mongo.95ebe78cca60e67709b4.png",
+    "static/media/tensorFlow.png": "/static/media/tensorFlow.5743c8d5ca24900220f1.png",
+    "static/media/Redux.png": "/static/media/Redux.b426d97de12d4dab1c06.png",
+    "static/media/c.png": "/static/media/c.83dfa097dfa94f707a41.png",
+    "static/media/react.png": "/static/media/react.e71f4c5b0c4306d65355.png",
+    "static/media/c++.png": "/static/media/c++.82739bedbdacc34c97a0.png",
+    "static/media/node.png": "/static/media/node.31c0e97d5776c294d370.png",
+    "static/media/python.png": "/static/media/python.04ddea1b43164f05b756.png",
+    "static/media/homeBack.svg": "/static/media/homeBack.4444eed288c8f145822f1d6c6d52f384.svg",
+    "index.html": "/index.html",
+    "main.dbdde4b7.css.map": "/static/css/main.dbdde4b7.css.map",
+    "main.75ed2cce.js.map": "/static/js/main.75ed2cce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbdde4b7.css",
+    "static/js/main.75ed2cce.js"
+  ]
+}

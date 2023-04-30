@@ -19,7 +19,7 @@ const HeroPage = () => {
     >
       <Box
         sx={{
-          display: { xs: 'none', sm: 'block' },
+          display: { xs: 'block' },
           position: 'absolute',
           width: '100%',
           height: '95vh',
