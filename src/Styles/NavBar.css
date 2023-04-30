@@ -1,0 +1,88 @@
+.navBar{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background: #ff770034;
+    z-index: 3;
+}
+
+.navBar .logo{
+    padding: 7px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 100px;
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Roboto', sans-serif; */
+    color: #FF7800;
+    cursor: pointer;
+}
+.navBar i{
+    display: none;
+}
+
+.navBar .navBarList{
+    width: 50%;
+    font-size: 18px;
+}
+
+.navBar .navBarList ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navBar .navBarList ul li{
+    
+    padding: 7px;
+    list-style: none;
+    color: #000000;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.navBar .navBarList ul li:hover{
+    background: #FF7800;
+    transition: 0.3s ease;
+    color: #f7f7f7;
+}
+
+.navBar .navBarList ul li a{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(20, 20, 20, 0.76);
+    text-decoration: none;
+    color: inherit;
+
+}
+
+@media screen and (max-width:900px) {
+    .navBar{
+        display: flex;
+    }
+    .navBar .bars{
+        display: flex;
+        align-self: center;
+        margin-right: 10px;
+    }
+    .navBar .navBarList{
+        width: 100%;
+    }   
+    .navBar .navBarList ul {
+        display: flex;
+        z-index: 4;
+        flex-direction: column;
+        margin-top: 45px;
+        width: 100%;
+        background: #ff770036;
+        border-radius: 10px;
+    }
+    .navBar .navBarList ul li{
+        align-self: center;
+    }
+    
+}
