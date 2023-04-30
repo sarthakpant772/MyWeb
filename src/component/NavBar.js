@@ -9,7 +9,7 @@ const NavBar = () => {
         position: 'sticky',
         width: '100%',
         height: '5vh',
-        backgroundColor: '#000814',
+        backgroundColor: 'primary.dark',
         border: 0,
         margin: 0,
         boxShadow:

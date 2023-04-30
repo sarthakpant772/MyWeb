@@ -18,8 +18,8 @@ function App() {
         white: '#fff',
       },
       primary: {
-        main: '#112D4E',
-        light: '#3F72AF',
+        main: '#212428',
+        light: '#16181B',
         contrastText: '#F9F7F7',
       },
       secondary: {

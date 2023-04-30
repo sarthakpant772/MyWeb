@@ -76,13 +76,14 @@ const ContactMe = () => {
           sx={{
             height: '90%',
             width: { xs: '100%', sm: '40%' },
-            // backgroundColor: '#FFF',
+            backgroundColor: 'primary.dark',
             boxShadow: `rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px`,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-evenly',
             color: 'secondary.light',
             alignItems: 'center',
+            borderRadius: '10px',
           }}
         >
           <Box
@@ -166,7 +167,7 @@ const ContactMe = () => {
           sx={{
             height: '90%',
             width: '40%',
-            // backgroundColor: '#FFF',
+            backgroundColor: 'primary.dark',
             borderRadius: '5px',
             boxShadow: `rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px`,
             display: { xs: 'none', sm: 'flex' },
@@ -181,6 +182,7 @@ const ContactMe = () => {
               alignItems: 'center',
               display: 'flex',
               justifyContent: 'center',
+              borderRight: '10px',
             }}
           >
             <Box
@@ -192,6 +194,7 @@ const ContactMe = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-evenly',
                 color: 'secondary.dark',
+                borderRight: '10px',
               }}
             >
               <TextField

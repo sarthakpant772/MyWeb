@@ -36,7 +36,7 @@ const HeroPage = () => {
           flexDirection: { sm: 'row', xs: 'column' },
           // alignItems: 'center',
           justifyContent: 'flex-start',
-          backgroundColor: '#000814',
+          backgroundColor: 'primary.dark',
         }}
       >
         {/* left */}
