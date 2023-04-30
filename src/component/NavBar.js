@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-scroll'
 
 const NavBar = () => {
   return (
@@ -49,54 +50,64 @@ const NavBar = () => {
         }}
       >
         <Button>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              color: 'secondary.main',
-            }}
-          >
-            Aboutme
-          </Typography>
+          <Link to="about" smooth={true}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'secondary.main',
+              }}
+            >
+              Aboutme
+            </Typography>
+          </Link>
         </Button>
         <Button>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              color: 'secondary.main',
-            }}
-          >
-            Experience
-          </Typography>
+          <Link to="exp" smooth={true}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'secondary.main',
+              }}
+            >
+              Experience
+            </Typography>
+          </Link>
         </Button>
         <Button>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              color: 'secondary.main',
-            }}
-          >
-            Achivements
-          </Typography>
+          <Link to="skill" smooth={true}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'secondary.main',
+              }}
+            >
+              Skills
+            </Typography>
+          </Link>
         </Button>
         <Button>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              color: 'secondary.main',
-            }}
-          >
-            Projects
-          </Typography>
+          <Link to="pro" smooth={true}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'secondary.main',
+              }}
+            >
+              Projects
+            </Typography>
+          </Link>
         </Button>
         <Button>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              color: 'secondary.main',
-            }}
-          >
-            Connect
-          </Typography>
+          <Link to="connect" smooth={true}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'secondary.main',
+              }}
+            >
+              Connect
+            </Typography>
+          </Link>
         </Button>
         <Button>
           <Typography

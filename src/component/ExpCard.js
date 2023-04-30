@@ -4,13 +4,12 @@ import pic from '../Images/Project.webp'
 import CodeIcon from '@mui/icons-material/Code'
 import { ArrowRight } from '@mui/icons-material'
 import { useSelector } from 'react-redux'
-import project from '../json/project.json'
-const Card = () => {
-  let value = useSelector((state) => state.card.projectValue)
+import project from '../json/exp.json'
+const ExpCard = () => {
+  let value = useSelector((state) => state.card.expValue)
   value = (value + 3) % 3
   console.log(value)
   // let value = 3
-
   return (
     <Box
       sx={{
@@ -156,4 +155,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default ExpCard

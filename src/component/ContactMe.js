@@ -8,6 +8,7 @@ import SendIcon from '@mui/icons-material/Send'
 const ContactMe = () => {
   return (
     <Box
+      id="connect"
       sx={{
         width: '100%',
         height: '80vh',
@@ -63,7 +64,7 @@ const ContactMe = () => {
       </Box>
       <Box
         sx={{
-          height: '75%',
+          height: { xs: '85%', sm: '75%' },
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
@@ -74,7 +75,7 @@ const ContactMe = () => {
         <Box
           sx={{
             height: '90%',
-            width: '40%',
+            width: { xs: '100%', sm: '40%' },
             // backgroundColor: '#FFF',
             boxShadow: `rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px`,
             display: 'flex',
@@ -89,12 +90,19 @@ const ContactMe = () => {
               width: '80%',
               height: '20%',
               alignItems: 'center',
+              display: { xs: 'none', lg: 'flex' },
+              flexDirection: 'column',
             }}
           >
             <Typography variant="h2" color="secondary.dark">
               Sarthak Pant
             </Typography>
-            <Typography variant="h4">Software Developer</Typography>
+            <Typography
+              variant="h4"
+              sx={{ display: { xs: 'none', sm: 'flex' } }}
+            >
+              Software Developer
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -130,22 +138,22 @@ const ContactMe = () => {
                 justifyContent: 'space-evenly',
               }}
             >
-              <Box sx={{ width: '8%' }}>
+              <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
                 <Button sx={{ color: 'secondary.light' }}>
                   <InstagramIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
-              <Box sx={{ width: '8%' }}>
+              <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
                 <Button sx={{ color: 'secondary.light' }}>
                   <TwitterIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
-              <Box sx={{ width: '8%' }}>
+              <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
                 <Button sx={{ color: 'secondary.light' }}>
                   <GitHubIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
               </Box>
-              <Box sx={{ width: '8%' }}>
+              <Box sx={{ width: { xs: '20%', sm: '8%' } }}>
                 <Button sx={{ color: 'secondary.light' }}>
                   <LinkedInIcon sx={{ height: '100%', width: '100%' }} />
                 </Button>
@@ -161,7 +169,7 @@ const ContactMe = () => {
             // backgroundColor: '#FFF',
             borderRadius: '5px',
             boxShadow: `rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px`,
-            display: 'flex',
+            display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
             color: 'secondary.dark',
           }}

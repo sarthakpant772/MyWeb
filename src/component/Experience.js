@@ -1,10 +1,17 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Typography, Button } from '@mui/material'
+import React, { useState } from 'react'
 import Card from './Card'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft'
-import { Button } from 'react-scroll'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { addExpValue } from '../features/card/cardSlice'
+import ExpCard from './ExpCard'
 const Experience = () => {
+  const [pointer, setPointer] = useState(0)
+  const dispatch = useDispatch()
+  let value = useSelector((state) => state.card.expValue)
+
   return (
     <Box
       sx={{
@@ -16,6 +23,7 @@ const Experience = () => {
         backgroundColor: 'primary.main',
         alignItems: 'center',
       }}
+      id="exp"
     >
       <Box
         sx={{
@@ -44,7 +52,7 @@ const Experience = () => {
       >
         <Box
           sx={{
-            display: 'flex',
+            display: { sm: 'flex' },
             alignItems: 'center',
             textAlign: 'center',
             alignItems: 'baseline',
@@ -78,19 +86,21 @@ const Experience = () => {
             justifyContent: 'center',
           }}
         >
-          <Box
-            sx={{
-              height: '3rem',
-              width: '3rem',
-              backgroundColor: 'secondary.dark',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderRadius: '50%',
-            }}
-          >
-            <KeyboardDoubleArrowLeftIcon />
-          </Box>
+          <Button onClick={() => dispatch(addExpValue(value - 1))}>
+            <Box
+              sx={{
+                height: '3rem',
+                width: '3rem',
+                backgroundColor: 'secondary.dark',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+              }}
+            >
+              <KeyboardDoubleArrowLeftIcon />
+            </Box>
+          </Button>
         </Box>
         <Box
           sx={{
@@ -100,7 +110,7 @@ const Experience = () => {
             flexDirection: 'row',
             // overflowX: 'scroll',
             alignItems: 'center',
-            justifyContent: 'space-evenly',
+            justifyContent: 'center',
           }}
         >
           <Box
@@ -108,10 +118,12 @@ const Experience = () => {
               height: '100%',
               width: '100%',
               alignItems: 'center',
+              justifyContent: 'center',
+              alignItems: 'center',
               display: 'flex',
             }}
           >
-            <Card />
+            <ExpCard />
           </Box>
 
           {/* <Card /> */}
@@ -119,16 +131,28 @@ const Experience = () => {
 
         <Box
           sx={{
-            height: '3rem',
-            width: '3rem',
-            backgroundColor: 'secondary.dark',
+            width: '10%',
+            height: '100%',
+            alignItems: 'center',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: '50%',
           }}
         >
-          <KeyboardDoubleArrowRightIcon />
+          <Button onClick={() => dispatch(addExpValue(value + 1))}>
+            <Box
+              sx={{
+                height: '3rem',
+                width: '3rem',
+                backgroundColor: 'secondary.dark',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+              }}
+            >
+              <KeyboardDoubleArrowRightIcon />
+            </Box>
+          </Button>
         </Box>
       </Box>
     </Box>

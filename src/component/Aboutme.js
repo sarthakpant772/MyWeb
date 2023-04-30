@@ -5,6 +5,7 @@ import pic from '../Images/pic.jpeg'
 const Aboutme = () => {
   return (
     <Box
+      id="about"
       sx={{
         width: '100%',
         height: '100vh',
@@ -21,7 +22,7 @@ const Aboutme = () => {
           width: '40%',
           height: '100%',
           alignItems: 'center',
-          display: 'flex',
+          display: { xs: 'none', sm: 'flex' },
           justifyContent: 'center',
           borderWidth: '10rem',
         }}
@@ -42,26 +43,45 @@ const Aboutme = () => {
       {/* aboutMe */}
       <Box
         sx={{
-          width: '60%',
-          height: '100%',
+          width: { xs: '100%', sm: '60%' },
+          height: { xs: '100%', sm: '90%' },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'space-evenly',
         }}
       >
-        <Box sx={{ width: '100%', height: '10%' }}>
-          <Box sx={{ width: '70%' }}>
-            <Typography variant="subtitle2" color="secondary.dark">
-              HERE'S AN INSIGHT
-            </Typography>
-            <Box sx={{ display: 'flex' }} mb="1rem">
-              <Typography variant="h2" color="secondary.main" mr="1rem">
-                About
+        <Box
+          sx={{
+            width: '100%',
+            height: { xs: '80%', sm: '70%' },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'center', sm: 'start' },
+            justifyContent: { xs: 'space-between', sm: 'flex-start' },
+          }}
+        >
+          <Box
+            sx={{
+              width: { xs: '90%', sm: '70%' },
+              height: { xs: '100%' },
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-evenly',
+            }}
+          >
+            <Box>
+              <Typography variant="subtitle2" color="secondary.dark">
+                HERE'S AN INSIGHT
               </Typography>
-              <Typography variant="h2" color="secondary.dark" noWrap>
-                Me
-              </Typography>
+              <Box sx={{ display: 'flex' }} mb="1rem">
+                <Typography variant="h2" color="secondary.main" mr="1rem">
+                  About
+                </Typography>
+                <Typography variant="h2" color="secondary.dark" noWrap>
+                  Me
+                </Typography>
+              </Box>
             </Box>
 
             <Typography variant="h5" color="secondary.main" mb="1rem">
@@ -69,9 +89,11 @@ const Aboutme = () => {
               designing exceptional digital experience
             </Typography>
             <Box
-              display="flex"
-              justifyContent="space-between"
-              alignItems="baseline"
+              sx={{
+                display: { xs: 'none', xl: 'flex' },
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}
             >
               <Typography variant="h5" color="secondary.main" mb="1rem">
                 I have won
@@ -83,7 +105,25 @@ const Aboutme = () => {
                 (National level Hackathon)
               </Typography>
             </Box>
-            <Box display="flex">
+            <Box
+              sx={{
+                display: { xl: 'none' },
+              }}
+            >
+              <Typography variant="h5" color="secondary.main">
+                I have won{' '}
+                <Typography variant="h5" color="secondary.dark">
+                  {' '}
+                  Smart India Hackathon-2022{' '}
+                </Typography>
+                (National Level Hackathon)
+              </Typography>
+            </Box>
+            <Box
+              sm={{
+                display: { xs: 'none', xl: 'flex' },
+              }}
+            >
               <Typography
                 variant="h5"
                 color="secondary.main"
@@ -98,7 +138,14 @@ const Aboutme = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ width: '100%', height: '10%' }}>
+        <Box
+          sx={{
+            width: { xs: '90%', sm: '100%' },
+            height: '4%',
+            display: 'flex',
+            justifyContent: { xs: 'flex-end', sm: 'flex-start' },
+          }}
+        >
           <Button sx={{ backgroundColor: 'primary.light' }} size="large">
             <Typography color="secondary.dark" variant="subtitle1">
               Download CV

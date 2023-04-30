@@ -5,8 +5,8 @@ const SkillCard = ({ props }) => {
   return (
     <Box
       sx={{
-        width: '15.75em',
-        height: '7.3em',
+        width: { xs: '8em', sm: '15.75em' },
+        height: { xs: '11em', sm: '7.3em' },
         backgroundColor: 'primary.main',
         borderRadius: '10px',
         boxShadow:
@@ -14,12 +14,13 @@ const SkillCard = ({ props }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
       }}
     >
       <Box
         sx={{
-          width: '45%',
-          height: '100%',
+          width: { sm: '45%' },
+          height: { sm: '100%' },
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -47,7 +48,7 @@ const SkillCard = ({ props }) => {
           width: '70%',
           height: '100%',
           alignItems: 'center',
-          display: 'flex',
+          display: { xs: 'none', sm: 'flex' },
           justifyContent: 'center',
         }}
       >
