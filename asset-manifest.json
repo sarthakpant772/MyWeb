@@ -1,12 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.dbdde4b7.css",
-    "main.js": "/static/js/main.b18914d1.js",
+    "main.js": "/static/js/main.c2b40957.js",
     "static/media/HeroPage.gif": "/static/media/HeroPage.3fd43e68ce3f7d3dc42c.gif",
+    "static/media/work.eps": "/static/media/work.541c084cb0fd1c615bf6.eps",
     "static/media/Project.webp": "/static/media/Project.4efd567754d8b2fde415.webp",
+    "static/media/work.ai": "/static/media/work.46d26b0d5ba678b3e116.ai",
+    "static/media/work.gif": "/static/media/work.3a42fd39fa8388b391eb.gif",
+    "static/media/work.jpg": "/static/media/work.29cd2af1799186547fda.jpg",
     "static/media/sql.png": "/static/media/sql.c10b5bc47b47f99e1ff1.png",
     "static/media/myPic.png": "/static/media/myPic.d9752efcd3ae7ff69648.png",
+    "static/media/Buffer.jpeg": "/static/media/Buffer.72bed05b50a23ee829cd.jpeg",
+    "static/media/spamBytes.jpeg": "/static/media/spamBytes.a85f1f45f3fb5608e31e.jpeg",
     "static/media/Mypic.png": "/static/media/Mypic.29c4a4151ebfb506f65c.png",
+    "static/media/ML.jpeg": "/static/media/ML.ee5d72a284251e0e9cdf.jpeg",
     "static/media/pic.jpeg": "/static/media/pic.105146e50f30fe61735f.jpeg",
     "static/media/mongo.png": "/static/media/mongo.95ebe78cca60e67709b4.png",
     "static/media/tensorFlow.png": "/static/media/tensorFlow.5743c8d5ca24900220f1.png",
@@ -16,13 +23,14 @@
     "static/media/c++.png": "/static/media/c++.82739bedbdacc34c97a0.png",
     "static/media/node.png": "/static/media/node.31c0e97d5776c294d370.png",
     "static/media/python.png": "/static/media/python.04ddea1b43164f05b756.png",
+    "static/media/insideGuide.jpeg": "/static/media/insideGuide.d6c8009b9de1e5d67b96.jpeg",
     "static/media/homeBack.svg": "/static/media/homeBack.4444eed288c8f145822f1d6c6d52f384.svg",
     "index.html": "/index.html",
     "main.dbdde4b7.css.map": "/static/css/main.dbdde4b7.css.map",
-    "main.b18914d1.js.map": "/static/js/main.b18914d1.js.map"
+    "main.c2b40957.js.map": "/static/js/main.c2b40957.js.map"
   },
   "entrypoints": [
     "static/css/main.dbdde4b7.css",
-    "static/js/main.b18914d1.js"
+    "static/js/main.c2b40957.js"
   ]
 }
