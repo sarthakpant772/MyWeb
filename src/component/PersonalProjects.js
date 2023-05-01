@@ -15,7 +15,7 @@ const PersonalProjects = () => {
       id="pro"
       sx={{
         width: '100%',
-        height: { sm: '100vh' },
+        height: { xs: '100vh', sm: '100vh' },
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
@@ -50,6 +50,7 @@ const PersonalProjects = () => {
       >
         <Box
           sx={{
+            width: '100%',
             display: { sm: 'flex' },
             alignItems: 'center',
             textAlign: 'center',

@@ -16,12 +16,13 @@ const Experience = () => {
     <Box
       sx={{
         width: '100%',
-        height: { lg: '100vh' },
+        height: { xs: '100vh', lg: '100vh' },
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         backgroundColor: 'primary.main',
         alignItems: 'center',
+        overflow: 'hidden',
       }}
       id="exp"
     >

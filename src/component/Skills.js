@@ -8,7 +8,7 @@ const Skills = () => {
       id="skill"
       sx={{
         width: '100%',
-        height: { sm: '100vh', xl: '80vh' },
+        height: { xs: '95vh', lg: '100vh', xl: '80vh' },
         backgroundColor: 'primary.main',
         display: 'flex',
         flexDirection: 'column',
@@ -18,64 +18,75 @@ const Skills = () => {
       <Box
         sx={{
           width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Box
-          sx={{
-            width: '50%',
-            height: '2px',
-            backgroundColor: 'secondary.dark',
-          }}
-        ></Box>
-      </Box>
-      <Box
-        sx={{
-          width: '100%',
           height: '20%',
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-          <Typography variant="h2" color="secondary.dark">
-            My{' '}
-          </Typography>
-          <Typography variant="h2" sx={{ color: 'secondary.main' }}>
-            Skills
-          </Typography>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          width: '100%',
-          height: { sm: '80%' },
-          alignItems: 'center',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-around',
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
         }}
       >
         <Box
           sx={{
             width: '100%',
-            height: { xs: '50vh', sm: '20%' },
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Box
+            sx={{
+              width: '50%',
+              height: '2px',
+              backgroundColor: 'secondary.dark',
+            }}
+          ></Box>
+        </Box>
+        <Box
+          sx={{
+            width: '100%',
+            height: '20%',
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            <Typography variant="h2" color="secondary.dark">
+              My{' '}
+            </Typography>
+            <Typography variant="h2" sx={{ color: 'secondary.main' }}>
+              Skills
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          width: '100%',
+          height: { xs: '80%', lg: '80%' },
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: { xs: 'space-evenly', lg: 'space-around' },
+        }}
+      >
+        <Box
+          sx={{
+            width: '100%',
+            height: { xs: '50%', lg: '20%' },
             display: 'flex',
             alignItems: 'center',
-            flexDirection: { xs: 'row', sm: 'row' },
+            flexDirection: { xs: 'row', lg: 'row' },
             justifyContent: 'space-evenly',
           }}
         >
           <Box
             sx={{
               width: '50%',
-              height: { xs: '100%', sm: '20%' },
+              height: { xs: '100%', lg: '20%' },
               display: 'flex',
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column', lg: 'row' },
               justifyContent: 'space-evenly',
             }}
           >
@@ -87,9 +98,9 @@ const Skills = () => {
             sx={{
               width: '50%',
               display: 'flex',
-              height: { xs: '100%', sm: '20%' },
+              height: { xs: '100%', lg: '20%' },
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column', lg: 'row' },
               justifyContent: 'space-evenly',
             }}
           >
@@ -101,8 +112,8 @@ const Skills = () => {
           sx={{
             width: '100%',
             height: '20%',
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: { xs: 'column', sm: 'row' },
+            display: { xs: 'none', lg: 'flex' },
+            flexDirection: { xs: 'column', lg: 'row' },
             justifyContent: 'space-evenly',
           }}
         >
@@ -114,8 +125,8 @@ const Skills = () => {
           sx={{
             width: '100%',
             height: '20%',
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: { xs: 'column', sm: 'row' },
+            display: { xs: 'none', lg: 'flex' },
+            flexDirection: { xs: 'column', lg: 'row' },
             justifyContent: 'space-evenly',
           }}
         >
@@ -126,20 +137,20 @@ const Skills = () => {
         <Box
           sx={{
             width: '100%',
-            height: { xs: '50vh', sm: '20%' },
+            height: { xs: '50%', lg: '20%' },
             display: 'flex',
             alignItems: 'center',
-            flexDirection: { xs: 'row', sm: 'row' },
+            flexDirection: { xs: 'row', lg: 'row' },
             justifyContent: 'space-evenly',
           }}
         >
           <Box
             sx={{
               width: '50%',
-              height: { xs: '100%', sm: '20%' },
-              display: { xs: 'flex', sm: 'none' },
+              height: { xs: '100%', lg: '20%' },
+              display: { xs: 'flex', lg: 'none' },
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column', lg: 'row' },
               justifyContent: 'space-evenly',
             }}
           >
@@ -150,10 +161,10 @@ const Skills = () => {
           <Box
             sx={{
               width: '50%',
-              display: { xs: 'flex', sm: 'none' },
-              height: { xs: '100%', sm: '20%' },
+              display: { xs: 'flex', lg: 'none' },
+              height: { xs: '100%', lg: '20%' },
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column', lg: 'row' },
               justifyContent: 'space-evenly',
             }}
           >

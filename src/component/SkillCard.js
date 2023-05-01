@@ -5,8 +5,8 @@ const SkillCard = ({ props }) => {
   return (
     <Box
       sx={{
-        width: { xs: '8em', sm: '15.75em' },
-        height: { xs: '11em', sm: '7.3em' },
+        width: { xs: '60%', sm: '15.75em' },
+        height: { xs: '30%', sm: '7.3em' },
         backgroundColor: 'primary.dark',
         borderRadius: '10px',
         boxShadow:

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import project from '../json/exp.json'
 const ExpCard = () => {
   let value = useSelector((state) => state.card.expValue)
-  const check  = project.length
+  const check = project.length
   value = (value + check) % check
   console.log(value)
   // let value = 3
@@ -17,7 +17,8 @@ const ExpCard = () => {
         marginLeft: '1em',
         marginRight: '1em',
         position: 'relative',
-        height: { xs: '90%', lg: '80%' },
+        height: { xs: '80%', lg: '80%' },
+        overflow: 'hidden',
         width: '70em',
         backgroundColor: 'primary.dark',
         boxShadow:
@@ -48,26 +49,33 @@ const ExpCard = () => {
         >
           <Box
             sx={{
-              minHeight: '3em',
+              height: '10%',
               display: 'flex',
-              alignItems: { xs: 'center', sm: 'start' },
+              alignItems: { xs: 'center', lg: 'start' },
               justifyContent: { xs: 'center', sm: 'flex-start' },
+              textAlign: 'center',
+              overflow: 'hidden',
             }}
           >
-            <Typography
-              variant="h4"
-              color="secondary.dark"
-              sx={{ textTransform: 'uppercase' }}
-            >
-              {project[value].name}
-            </Typography>
+            <Box>
+              <Typography
+                variant="h4"
+                color="secondary.dark"
+                sx={{ textTransform: 'uppercase' }}
+              >
+                {project[value].name}
+              </Typography>
+            </Box>
           </Box>
           <Box
             sx={{
-              minHeight: '20em',
+              height: { xs: '70%', sm: '20em' },
               width: '90%',
               color: 'secondary.main',
-              marginTop: '1.5em',
+              // display: 'flex',
+              alignItems: 'center',
+              textOverflow: 'ellipsis ellipsis',
+              overflow: { xs: 'scroll', lg: 'visible' },
             }}
           >
             <Typography variant="subtitle1">

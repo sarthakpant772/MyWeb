@@ -17,7 +17,8 @@ const Card = () => {
         marginLeft: '1em',
         marginRight: '1em',
         position: 'relative',
-        height: {lg: '80%' },
+        height: { xs: '80%', lg: '80%' },
+        overflow: 'hidden',
         width: '70em',
         backgroundColor: 'primary.dark',
         boxShadow:
@@ -48,31 +49,42 @@ const Card = () => {
         >
           <Box
             sx={{
-              minHeight: '3em',
+              height: '10%',
               display: 'flex',
-              alignItems: { xs: 'center', sm: 'start' },
+              alignItems: { xs: 'center', lg: 'start' },
               justifyContent: { xs: 'center', sm: 'flex-start' },
+              textAlign: 'center',
             }}
           >
-            <Typography
-              variant="h4"
-              color="secondary.dark"
-              sx={{ textTransform: 'uppercase' }}
-            >
-              {project[value].name}
-            </Typography>
+            <Box>
+              <Typography
+                variant="h4"
+                color="secondary.dark"
+                sx={{ textTransform: 'uppercase' }}
+              >
+                {project[value].name}
+              </Typography>
+            </Box>
           </Box>
           <Box
             sx={{
-              minHeight: '20em',
+              height: { xs: '70%', sm: '80%' },
               width: '90%',
               color: 'secondary.main',
               marginTop: '1.5em',
+              // display: 'flex',
+              alignItems: 'center',
+              textOverflow: 'ellipsis ellipsis',
+              overflow: { xs: 'scroll', lg: 'visible' },
             }}
           >
             <Typography variant="subtitle1">
               {project[value].description1}
-              <Typography variant="subtitle1" mt="1rem">
+              <Typography
+                variant="subtitle1"
+                mt="1rem"
+                sx={{ xs: 'display:none' }}
+              >
                 {project[value].description2}
               </Typography>
             </Typography>
@@ -92,6 +104,8 @@ const Card = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
+                // height: '10%',
+                flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
               }}
