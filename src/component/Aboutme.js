@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import { borderRadius } from '@mui/system'
 import React from 'react'
-import pic from '../Images/pic.jpeg'
+import pic from '../Images/MyNew.jpg'
 const Aboutme = () => {
   const onButtonClick = () => {
     // using Java Script method to get PDF file
@@ -148,7 +148,7 @@ const Aboutme = () => {
                 I am currently working as a SDE INTERN at
               </Typography>
               <Typography variant="h5" color="secondary.dark">
-                EduFuse.
+                Crop Coin.
               </Typography>
             </Box>
           </Box>
