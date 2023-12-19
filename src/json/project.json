@@ -12,7 +12,7 @@
     "description1": "This project aims to create a library management system for people with vision impairment.",
     "description2": "Our aim is to provide an interactive and user-friendly interface that allows users to access books in the library with ease. Our system analyses the location of books and guides the person with the reference of the number of footsteps and directions from their current location. The most unique feature of our system is that it enables the user to use their voice to say the name of the book along with the author's name, making it easier for them to learn without any dependencies. We understand the importance of accessibility and inclusivity and this porject is dedicated for them.",
     "codeLink": "https://github.com/sarthakpant772/insideGuide",
-    "demoLink": "",
+    "demoLink": "https://insideguide.netlify.app/",
     "imageLink": "insideGuide.jpeg"
   },
   {
@@ -31,4 +31,5 @@
     "demoLink": "",
     "imageLink": "ML.jpeg"
   }
+  
 ]
